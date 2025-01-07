@@ -21,7 +21,7 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpGet]
         public async Task<IActionResult> CategoryList()
         {
-            var values=await _categoryRepository.GetAllCategoryAsync();
+            var values = await _categoryRepository.GetAllCategoryAsync();
             return Ok(values);
         }
 
@@ -44,6 +44,13 @@ namespace RealEstate_Dapper_Api.Controllers
         {
             _categoryRepository.UpdateCategory(updateCategoryDto);
             return Ok("Kategori başarıyla güncellendi");
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCategory(int id)
+        {
+            var value = await _categoryRepository.GetCategory(id); //Async methodda await keyword koyulmayınca hata alınıyor.
+            return Ok(value);
         }
     }
 }

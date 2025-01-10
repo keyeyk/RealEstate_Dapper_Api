@@ -6,6 +6,8 @@ namespace RealEstate_Dapper_Api.Models.DapperContext
 {
     public class Context
     {
+        // Bağlantıların tutulduğu yer.
+
         private readonly IConfiguration _configuration;
         private readonly string _connectionString;
 

@@ -10,7 +10,6 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
     {
         // Dapper'ın döndüğü yer. Entity'den farkı query tarafı. Çok daha hızlı çok daha efektif.
 
-
         private readonly Context _context;
 
         public CategoryRepository(Context context)
